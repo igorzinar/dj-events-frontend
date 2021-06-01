@@ -1,6 +1,8 @@
-import React from 'react';
+
+import React from "react";
 
 const EventPage = () => {
+
     return (
         <div>
            <h1>My event</h1>
