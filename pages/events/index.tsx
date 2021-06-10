@@ -1,11 +1,12 @@
-import React from 'react';
+import Layout from "../../components/Layout";
+import { StyledH1 } from "../../styles/Styled";
 
 const EventsPage = () => {
-    return (
-        <div>
-            <h1>My Events</h1>
-        </div>
-    );
+  return (
+    <Layout>
+      <StyledH1>My Events</StyledH1>
+    </Layout>
+  );
 };
 
 export default EventsPage;

@@ -1,0 +1,13 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "no-duplicate-selectors": true,
+    "color-hex-case": "lower",
+    "color-hex-length": "short",
+    "color-named": "never",
+    "property-no-vendor-prefix": true,
+    "media-feature-name-no-vendor-prefix": true,
+    "no-descending-specificity": null,
+    "rule-empty-line-before": null
+  }
+}

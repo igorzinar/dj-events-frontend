@@ -1,34 +1,39 @@
-import React from 'react';
+import React from "react";
 import Head from "next/head";
-import {inspect} from "util";
-import styles from "../styles/Layout.module.css"
+import Header from "./Header";
+import styled from "styled-components";
 
 interface IProp {
-    title: string;
-    keywords: string;
-    description: string;
-    children: any;
+  title?: string;
+  keywords?: string;
+  description?: string;
+  children?: any;
 }
 
-const Layout = (data: IProp) => {
-    return (
-        <div>
-            <Head>
-                <title>{data.title}</title>
-                <meta name="description" content={data.description}/>
-                <meta name="keywords" content={data.keywords}/>
-            </Head>
-<div className={styles.container}>
-    {data.children}
-</div>
-
-        </div>
-    );
+const defaultProps = {
+  title: "DJ Events | Find the hottest parties",
+  description: "Find the latest DJ and other musical events",
+  keywords: "music, dj, edm, events",
 };
 
-Layout.defaultProps = {
-    title: "DJ Events | Find the hottest parties",
-    description: "Find the latest DJ and other musical events",
-    keywords: "music, dj, edm, events"
-}
+const Layout = (data: IProp = defaultProps) => {
+  return (
+    <div>
+      <Head>
+        <title>{data.title}</title>
+        <meta name="description" content={data.description} />
+        <meta name="keywords" content={data.keywords} />
+      </Head>
+      <Header />
+      <Container>{data.children}</Container>
+    </div>
+  );
+};
+
 export default Layout;
+
+const Container = styled.div`
+  margin: 60px auto;
+  max-width: 960px;
+  padding: 0 30px;
+`;
