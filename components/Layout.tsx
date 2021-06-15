@@ -1,6 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
+import Footer from "./Footer";
+
 import styled from "styled-components";
 
 interface IProp {
@@ -26,6 +28,7 @@ const Layout = (data: IProp = defaultProps) => {
       </Head>
       <Header />
       <Container>{data.children}</Container>
+      <Footer />
     </div>
   );
 };
