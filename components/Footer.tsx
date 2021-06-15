@@ -15,10 +15,12 @@ const Footer = () => {
 export default Footer;
 
 const Container = styled.div`
+  display: flex;
+  justify-content: center;
   margin: 100px 0 40px;
   text-align: center;
   > p {
-    margin: 5px 0;
+    margin: 5px 10px;
   }
 `;
 

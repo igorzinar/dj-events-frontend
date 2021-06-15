@@ -1,4 +1,3 @@
-import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -20,7 +19,7 @@ const defaultProps = {
 
 const Layout = (data: IProp = defaultProps) => {
   return (
-    <div>
+    <Wrapper>
       <Head>
         <title>{data.title}</title>
         <meta name="description" content={data.description} />
@@ -29,12 +28,18 @@ const Layout = (data: IProp = defaultProps) => {
       <Header />
       <Container>{data.children}</Container>
       <Footer />
-    </div>
+    </Wrapper>
   );
 };
 
 export default Layout;
 
+const Wrapper = styled.div`
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+`;
 const Container = styled.div`
   margin: 60px auto;
   max-width: 960px;
