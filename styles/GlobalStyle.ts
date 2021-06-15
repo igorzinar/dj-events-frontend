@@ -1,73 +1,92 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    @font-face {
+      font-family: "Neuton";
+      src: local("Neuton"),
+      url("https://fonts.gstatic.com/s/neuton/v13/UMBTrPtMoH62xUZCz4g6.woff2") format("woff2");
+    }
+  
+    @font-face {
+      font-family: "Nunito Sans";
+      src: local("Nunito Sans"),
+      url("https://fonts.gstatic.com/s/nunitosans/v6/pe0qMImSLYBIv1o4X1M8cce9I9s.woff2") format("woff2");
+      font-display: swap;
+    }
+  
+  
+    @font-face {
+      font-family: "Nunito Sans";
+      src: local("Nunito Sans"),
+      url("https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc9iB85tU1E.woff2") format("woff2");
+      font-weight: 600;
+      font-display: swap;
+    }
+   
+    @font-face {
+      font-family: 'Nunito Sans';
+      font-style: italic;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe01MImSLYBIv1o4X1M8cce4GwZuY1MIUg.woff2) format('woff2');
+    }
+  
+    @font-face {
+      font-family: 'Nunito Sans';
+      font-style: normal;
+      font-weight: bold;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc8GBs5tU1E.woff2) format('woff2');
+    }
+  
+    @font-face {
+      font-family: 'Nunito Sans';
+      font-style: italic;
+      font-weight: bold;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe01MImSLYBIv1o4X1M8cce4G2JvY1MIUg.woff2) format('woff2');
+    }
+    
+  
+    @font-face {
+      font-family: "Nunito Sans";
+      src: local("Nunito Sans"),
+      url("https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc8aBc5tU1E.woff2") format("woff2");
+      font-weight: 800;
+      font-display: swap;
+    }
+    
+    @font-face {
+      font-family: 'Nunito Sans';
+      font-style: italic;
+      font-weight: 800;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe01MImSLYBIv1o4X1M8cce4G35sY1MIUg.woff2) format('woff2');
+    }
+    
+    *,
+    *:after,
+    *:before {
+      box-sizing: border-box;
+    }
+  
+    body, button, h1, h2, h3, h4, h5, h6, a, span, p, div, select, option {
+      font-family: 'Nunito Sans', -apple-system, 'Neuton', sans-serif;
+      line-height: normal;
+    }
+  
+    p {
+      margin: 0;
+    }
+    
+    a:focus {
+      outline: none !important;
+    }
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  
+  
 
-  html,
-  body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.8;
-  }
 
-  a {
-    text-decoration: none;
-    color: steelblue;
-  }
 
-  p {
-    margin: 10px 0;
-  }
-
-  h1 {
-    margin-bottom: 20px;
-  }
-ul { 
-  list-style: none;
-}
-  .btn {
-    display: inline-block;
-    background: red;
-    color: #fff;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: 0;
-    border-radius: 5px;
-  }
-
-  .btn:hover {
-    opacity: 0.9;
-  }
-
-  .btn-secondary {
-    font: inherit;
-    font-size: 13px;
-    background: #000;
-    color: #fff !important;
-    border: 0;
-    border-radius: 5px;
-    padding: 5px 15px;
-    margin: 0 20px;
-    cursor: pointer;
-  }
-
-  .btn-secondary:hover {
-    opacity: 0.8;
-  }
-
-  .btn-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .btn-icon svg {
-    margin-right: 5px;
-  }
 `;
 export default GlobalStyle;
