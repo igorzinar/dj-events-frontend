@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Layout from "../components/Layout";
-import { StyledH1 } from "../styles/Styled";
+import Layout from "@/components/Layout";
+import { StyledH1 } from "@/styles/Styled";
 import styled from "styled-components";
 
 const AboutPage = () => {

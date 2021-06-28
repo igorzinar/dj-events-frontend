@@ -1,5 +1,5 @@
-import Layout from "../components/Layout";
-import { StyledH1 } from "../styles/Styled";
+import Layout from "@/components/Layout";
+import { StyledH1 } from "@/styles/Styled";
 
 const Home = () => {
   return (

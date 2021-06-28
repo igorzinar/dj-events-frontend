@@ -1,4 +1,4 @@
-import Layout from "../components/Layout";
+import Layout from "@/components/Layout";
 import Link from "next/link";
 import { FaExclamationTriangle } from "react-icons/fa";
 import styled from "styled-components";
@@ -21,7 +21,9 @@ const NotFoundPage = () => {
 export default NotFoundPage;
 
 const Wrapper = styled.div`
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 100px 0 200px;
   > h1 {
     font-size: 50px;
