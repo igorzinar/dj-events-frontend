@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
+import Showcase from "./Showcase";
 
 import styled from "styled-components";
+import { useRouter } from "next/router";
 
 interface IProp {
   title?: string;
@@ -18,6 +20,7 @@ const defaultProps = {
 };
 
 const Layout = (data: IProp = defaultProps) => {
+  const router = useRouter();
   return (
     <Wrapper>
       <Head>
@@ -26,6 +29,7 @@ const Layout = (data: IProp = defaultProps) => {
         <meta name="keywords" content={data.keywords} />
       </Head>
       <Header />
+      {router.pathname === "/" && <Showcase />}
       <Container>{data.children}</Container>
       <Footer />
     </Wrapper>
